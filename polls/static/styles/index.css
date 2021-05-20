@@ -1,0 +1,36 @@
+.new{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.new{
+    font-size: 2.1rem;
+    color: purple;
+}
+
+.old{
+    display: block;
+
+}
+
+.old p{
+    font-size: 1.1rem;
+    color: brown;
+    text-align: center;
+}
+
+body{
+    background-color: gray;
+
+}
+
+.way{
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    background-color: darkgray;
+
+}

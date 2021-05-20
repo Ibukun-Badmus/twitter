@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+
+    {% for new_tweet in form %}
+        <form action="{% url 'polls:create_tweet' %}" method="post">
+
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button name="submit">Tweet</button>
+        </form>
+
+    {% endfor %}
+
+{% endblock %}
+
+</body>
+</html>

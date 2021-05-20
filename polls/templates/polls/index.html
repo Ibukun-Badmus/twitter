@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static "styles/index.css" %}">
+</head>
+<body>
+
+<div class="way">
+    <div>
+        <ul class="new">
+            <li><a>Home</a></li>
+            <li><a>Tweets</a></li>
+            <li><a>Submit Tweets</a></li>
+        </ul>
+    </div>
+    <div class="old">
+        {% block content %}
+            {% for tweet in tweets %}
+                <p>{{ tweet.text }}</p>
+                <p>{{ tweet.pub_date }}</p>
+            {% endfor %}
+        {% endblock %}
+    </div>
+
+</div>
+
+</body>
+</html>
